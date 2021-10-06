@@ -1,0 +1,6 @@
+<gresource>
+	<prefix name="images">
+		<file path="bmage.png"></file>
+		<file path="image.png"></file>
+	</prefix>
+</gresource>

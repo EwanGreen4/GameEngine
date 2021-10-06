@@ -1,0 +1,14 @@
+# ninja log v5
+1	239	1633527801425602731	CMakeFiles/GameEngine.dir/engine/application.cpp.o	b737257bc8369488
+0	255	1633317922366162312	CMakeFiles/GameEngine.dir/application.cpp.o	65180a88f721c013
+1	327	1633527801512270287	CMakeFiles/GameEngine.dir/engine/resource.cpp.o	b25c161691bede1b
+1117	1198	1633493188137478980	GameEngine	ce3ae52a0755a801
+1	1236	1633527595450154039	CMakeFiles/GameEngine.dir/main.cpp.o	d2dd03c8201157f3
+0	24	1633527814559070914	build.ninja	7763650380dd8189
+1	1296	1633527595510154655	CMakeFiles/GameEngine.dir/implementation.cpp.o	3d3b4375923d8a1e
+0	4	0	clean	a31eedcededa8236
+1	357	1633527815112409929	CMakeFiles/GameEngine.dir/engine/application.cpp.o	2fa45ccbabb5063d
+6	424	1633527815182410647	CMakeFiles/GameEngine.dir/engine/resource.cpp.o	800a3a8f0b33aa38
+1	336	1633528739375483088	CMakeFiles/GameEngine.dir/engine/resource.cpp.o	800a3a8f0b33aa38
+1	1137	1633528740175491503	CMakeFiles/GameEngine.dir/main.cpp.o	d2dd03c8201157f3
+1	1189	1633528740228825398	CMakeFiles/GameEngine.dir/implementation.cpp.o	3d3b4375923d8a1e
