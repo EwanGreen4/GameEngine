@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /run/media/ewan/EwanSSD/development/c-c++/GameEngine/build/
+cmake_ninja_workdir = /home/ewan/GameEngine/build/
 
 #############################################
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /run/media/ewan/EwanSSD/development/c-c++/GameEngine/build && /usr/bin/cmake --regenerate-during-build -S/run/media/ewan/EwanSSD/development/c-c++/GameEngine -B/run/media/ewan/EwanSSD/development/c-c++/GameEngine/build
+  COMMAND = cd /home/ewan/GameEngine/build && /usr/bin/cmake --regenerate-during-build -S/home/ewan/GameEngine -B/home/ewan/GameEngine/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /run/media/ewan/EwanSSD/development/c-c++/GameEngine/build && /usr/bin/cmake-gui -S/run/media/ewan/EwanSSD/development/c-c++/GameEngine -B/run/media/ewan/EwanSSD/development/c-c++/GameEngine/build
+  COMMAND = cd /home/ewan/GameEngine/build && /usr/bin/cmake-gui -S/home/ewan/GameEngine -B/home/ewan/GameEngine/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -73,31 +73,38 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_GameEngine: phony || CMakeFiles/GameEngine.dir
 
-build CMakeFiles/GameEngine.dir/main.cpp.o: CXX_COMPILER__GameEngine_Debug /run/media/ewan/EwanSSD/development/c-c++/GameEngine/main.cpp || cmake_object_order_depends_target_GameEngine
+build CMakeFiles/GameEngine.dir/main.cpp.o: CXX_COMPILER__GameEngine_Debug /home/ewan/GameEngine/main.cpp || cmake_object_order_depends_target_GameEngine
   DEP_FILE = CMakeFiles/GameEngine.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/usr/include/SDL2 -I/run/media/ewan/EwanSSD/development/c-c++/GameEngine/engine
+  INCLUDES = -I/usr/include/SDL2 -I/home/ewan/GameEngine/engine
   OBJECT_DIR = CMakeFiles/GameEngine.dir
   OBJECT_FILE_DIR = CMakeFiles/GameEngine.dir
 
-build CMakeFiles/GameEngine.dir/engine/application.cpp.o: CXX_COMPILER__GameEngine_Debug /run/media/ewan/EwanSSD/development/c-c++/GameEngine/engine/application.cpp || cmake_object_order_depends_target_GameEngine
+build CMakeFiles/GameEngine.dir/engine/application.cpp.o: CXX_COMPILER__GameEngine_Debug /home/ewan/GameEngine/engine/application.cpp || cmake_object_order_depends_target_GameEngine
   DEP_FILE = CMakeFiles/GameEngine.dir/engine/application.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/usr/include/SDL2 -I/run/media/ewan/EwanSSD/development/c-c++/GameEngine/engine
+  INCLUDES = -I/usr/include/SDL2 -I/home/ewan/GameEngine/engine
   OBJECT_DIR = CMakeFiles/GameEngine.dir
   OBJECT_FILE_DIR = CMakeFiles/GameEngine.dir/engine
 
-build CMakeFiles/GameEngine.dir/engine/resource.cpp.o: CXX_COMPILER__GameEngine_Debug /run/media/ewan/EwanSSD/development/c-c++/GameEngine/engine/resource.cpp || cmake_object_order_depends_target_GameEngine
+build CMakeFiles/GameEngine.dir/engine/lib/microtar/microtar.c.o: C_COMPILER__GameEngine_Debug /home/ewan/GameEngine/engine/lib/microtar/microtar.c || cmake_object_order_depends_target_GameEngine
+  DEP_FILE = CMakeFiles/GameEngine.dir/engine/lib/microtar/microtar.c.o.d
+  FLAGS = -g
+  INCLUDES = -I/usr/include/SDL2 -I/home/ewan/GameEngine/engine
+  OBJECT_DIR = CMakeFiles/GameEngine.dir
+  OBJECT_FILE_DIR = CMakeFiles/GameEngine.dir/engine/lib/microtar
+
+build CMakeFiles/GameEngine.dir/engine/resource.cpp.o: CXX_COMPILER__GameEngine_Debug /home/ewan/GameEngine/engine/resource.cpp || cmake_object_order_depends_target_GameEngine
   DEP_FILE = CMakeFiles/GameEngine.dir/engine/resource.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/usr/include/SDL2 -I/run/media/ewan/EwanSSD/development/c-c++/GameEngine/engine
+  INCLUDES = -I/usr/include/SDL2 -I/home/ewan/GameEngine/engine
   OBJECT_DIR = CMakeFiles/GameEngine.dir
   OBJECT_FILE_DIR = CMakeFiles/GameEngine.dir/engine
 
-build CMakeFiles/GameEngine.dir/implementation.cpp.o: CXX_COMPILER__GameEngine_Debug /run/media/ewan/EwanSSD/development/c-c++/GameEngine/implementation.cpp || cmake_object_order_depends_target_GameEngine
+build CMakeFiles/GameEngine.dir/implementation.cpp.o: CXX_COMPILER__GameEngine_Debug /home/ewan/GameEngine/implementation.cpp || cmake_object_order_depends_target_GameEngine
   DEP_FILE = CMakeFiles/GameEngine.dir/implementation.cpp.o.d
   FLAGS = -g -std=gnu++17
-  INCLUDES = -I/usr/include/SDL2 -I/run/media/ewan/EwanSSD/development/c-c++/GameEngine/engine
+  INCLUDES = -I/usr/include/SDL2 -I/home/ewan/GameEngine/engine
   OBJECT_DIR = CMakeFiles/GameEngine.dir
   OBJECT_FILE_DIR = CMakeFiles/GameEngine.dir
 
@@ -109,7 +116,7 @@ build CMakeFiles/GameEngine.dir/implementation.cpp.o: CXX_COMPILER__GameEngine_D
 #############################################
 # Link the executable GameEngine
 
-build GameEngine: CXX_EXECUTABLE_LINKER__GameEngine_Debug CMakeFiles/GameEngine.dir/main.cpp.o CMakeFiles/GameEngine.dir/engine/application.cpp.o CMakeFiles/GameEngine.dir/engine/resource.cpp.o CMakeFiles/GameEngine.dir/implementation.cpp.o | /usr/lib/libSDL2main.a /usr/lib/libSDL2-2.0.so.0.16.0 /usr/lib/libSDL2_image.so
+build GameEngine: CXX_EXECUTABLE_LINKER__GameEngine_Debug CMakeFiles/GameEngine.dir/main.cpp.o CMakeFiles/GameEngine.dir/engine/application.cpp.o CMakeFiles/GameEngine.dir/engine/lib/microtar/microtar.c.o CMakeFiles/GameEngine.dir/engine/resource.cpp.o CMakeFiles/GameEngine.dir/implementation.cpp.o | /usr/lib/libSDL2main.a /usr/lib/libSDL2-2.0.so.0.16.0 /usr/lib/libSDL2_image.so
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/libSDL2main.a  /usr/lib/libSDL2-2.0.so.0.16.0  /usr/lib/libSDL2_image.so
   OBJECT_DIR = CMakeFiles/GameEngine.dir
@@ -127,7 +134,7 @@ build GameEngine: CXX_EXECUTABLE_LINKER__GameEngine_Debug CMakeFiles/GameEngine.
 # =============================================================================
 
 #############################################
-# Folder: /run/media/ewan/EwanSSD/development/c-c++/GameEngine/build
+# Folder: /home/ewan/GameEngine/build
 
 build all: phony GameEngine
 

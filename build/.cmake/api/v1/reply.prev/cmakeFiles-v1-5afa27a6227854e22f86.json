@@ -158,8 +158,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/run/media/ewan/EwanSSD/development/c-c++/GameEngine/build",
-		"source" : "/run/media/ewan/EwanSSD/development/c-c++/GameEngine"
+		"build" : "/home/ewan/GameEngine/build",
+		"source" : "/home/ewan/GameEngine"
 	},
 	"version" : 
 	{

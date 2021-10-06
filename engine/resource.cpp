@@ -1,60 +1,68 @@
 #include "resource.h"
-INCBIN(grc, "../data.grc");
+
+#define INCBIN_PREFIX r_
+#include "lib/incbin/incbin.h"
+INCBIN(grc, "/home/ewan/GameEngine/data.grc");
 
 std::vector<Resource::fileContents> Resource::getFileList() {
 
-  char *rwx = nullptr;
-  strcpy(rwx, tarData);
+    char *tmp = reinterpret_cast<char *>(tarData);
+    tmp[r_grcSize + 1] = '\0';
 
-  mtar_mem_stream_t e;
-  e.data = rwx;
-  e.size = r_grcSize + 1;
-  e.pos = 0;
+    mtar_mem_stream_t e;
+    e.data = tmp;
+    e.size = r_grcSize;
+    e.pos = 0;
 
-  mtar_open_mem(&tarball, &e);
-  std::vector<Resource::fileContents> list;
-  mtar_header_t h;
-  while ((mtar_read_header(&tarball, &h)) != MTAR_ENULLRECORD) {
-    list.push_back(Resource::fileContents{h.name, h.size});
-    mtar_next(&tarball);
-  }
-  return list;
+//    mtar_open_mem(&tarball, &e);
+    mtar_open(&tarball, "../data.grc", "r"); // this works
+    std::vector<Resource::fileContents> list;
+    mtar_header_t h;
+    while ((mtar_read_header(&tarball, &h)) != MTAR_ENULLRECORD) {
+        list.push_back(Resource::fileContents{h.name, h.size});
+        mtar_next(&tarball);
+    }
+    return list;
 }
 
 Resource::Resource() {
-  tarData = reinterpret_cast<const char *>(r_grcData);
-  fileList = getFileList();
+    tarData = calloc(1, r_grcSize);
+    memcpy(tarData, r_grcData, r_grcSize);
+    fileList = getFileList();
 }
 
 unsigned long Resource::countFiles() { return fileList.size(); }
 
 Resource::~Resource() {
-  mtar_close(&tarball);
-  fileList.clear();
+    mtar_close(&tarball);
+    fileList.clear();
 }
 
 const char *Resource::getFile(const std::string name) {
-  unsigned long e = fileList.size();
-  for (unsigned long i = e; i > 0; i--) {
-    if (fileList.at(i).name == name) {
-      mtar_header_t h;
-      char *contents = nullptr;
-      mtar_find(&tarball, name.c_str(), &h);
-      mtar_read_data(&tarball, contents, fileList.at(i).size + 1);
-      return contents;
+    unsigned long e = fileList.size() - 1;
+    for (unsigned long i = e; i >= 0; i--) {
+        if (fileList.at(i).name == name) {
+
+            mtar_header_t h;
+            mtar_read_header(&tarball, &h);
+            mtar_find(&tarball, name.c_str(), &h);
+            char *contents = (char*)calloc(1, h.size + 1);
+
+            mtar_read_data(&tarball, contents, h.size);
+            return contents;
+        }
     }
-  }
-  return nullptr;
+    return nullptr;
 }
 
 unsigned int Resource::getSize(const std::string name) {
-  unsigned long e = fileList.size();
-  for (unsigned long i = e; i > 0; i--) {
-    if (fileList.at(i).name == name) {
-      return fileList.at(i).size;
+    unsigned long e = fileList.size() - 1;
+    for (unsigned long i = e; i >= 0; i--) {
+        if (fileList.at(i).name == name) {
+            return fileList.at(i).size;
+        }
     }
-  }
-  return UINT_MAX;
+    return UINT_MAX;
 }
 
 // TODO: make sure this code works

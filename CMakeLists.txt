@@ -15,11 +15,14 @@ add_executable(${PROJECT_NAME}
     engine/application.h
     engine/application.cpp
 
+    engine/lib/microtar/microtar.c
+
     engine/resource.h
     engine/resource.cpp
 
     implementation.h
     implementation.cpp
+    data.grc
     )
 
 find_package(SDL2 REQUIRED)

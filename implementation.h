@@ -6,6 +6,7 @@
 #include <GameEngine>
 #include <filesystem>
 #include <iostream>
+#include <fstream>
 
 class GameApplication : public Application {
 

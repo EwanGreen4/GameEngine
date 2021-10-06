@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/run/media/ewan/EwanSSD/development/c-c++/GameEngine/build"
+			"value" : "/home/ewan/GameEngine/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -579,7 +579,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/run/media/ewan/EwanSSD/development/c-c++/GameEngine"
+			"value" : "/home/ewan/GameEngine"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -788,6 +788,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "1"
+		},
+		{
+			"name" : "CMAKE_PREFIX_PATH",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "No help, variable specified on the command line."
+				}
+			],
+			"type" : "STRING",
+			"value" : "/usr"
 		},
 		{
 			"name" : "CMAKE_PROJECT_DESCRIPTION",
@@ -1139,7 +1151,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/run/media/ewan/EwanSSD/development/c-c++/GameEngine/build"
+			"value" : "/home/ewan/GameEngine/build"
 		},
 		{
 			"name" : "GameEngine_IS_TOP_LEVEL",
@@ -1163,7 +1175,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/run/media/ewan/EwanSSD/development/c-c++/GameEngine"
+			"value" : "/home/ewan/GameEngine"
 		},
 		{
 			"name" : "QT_CREATOR_SKIP_PACKAGE_MANAGER_SETUP",
@@ -1188,18 +1200,6 @@
 			],
 			"type" : "STRING",
 			"value" : "/usr/lib/qt6/bin/qmake"
-		},
-		{
-			"name" : "SDL2::SDL2_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for SDL2::SDL2."
-				}
-			],
-			"type" : "PATH",
-			"value" : "SDL2::SDL2_DIR-NOTFOUND"
 		},
 		{
 			"name" : "SDL2_DIR",
@@ -1244,18 +1244,6 @@
 			],
 			"type" : "FILEPATH",
 			"value" : "/usr/lib/libSDL2_image.so"
-		},
-		{
-			"name" : "SDL2_image_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for SDL2_image."
-				}
-			],
-			"type" : "PATH",
-			"value" : "SDL2_image_DIR-NOTFOUND"
 		}
 	],
 	"kind" : "cache",

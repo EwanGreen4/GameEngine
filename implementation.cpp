@@ -4,8 +4,6 @@ void GameApplication::exit() {
   SDL_free(window);
   SDL_free(renderer);
 }
-std::string append(std::string a, std::string b) { return a + b; }
-
 bool GameApplication::mainLoop() {
 
   bool finishedNaturally = true;
@@ -24,10 +22,14 @@ bool GameApplication::mainLoop() {
   Resource rc;
   int bmageSize = static_cast<int>(rc.getSize("bmage.png"));
   const char *bmageData = rc.getFile("bmage.png");
-  SDL_RWops bmageFp(*SDL_RWFromConstMem(bmageData, bmageSize));
+      SDL_RWops bmageFp(*SDL_RWFromConstMem(bmageData, bmageSize));
 
   int imageSize = static_cast<int>(rc.getSize("image.png"));
   const char *imageData = rc.getFile("image.png");
+
+  log(LOG_NONFATAL, rc.getFile("test/test.txt"));
+  log(LOG_NONFATAL, std::to_string(rc.getSize("test/test.txt")) + " bytes\n");
+
   SDL_RWops imageFp(*SDL_RWFromConstMem(imageData, imageSize));
 
   SDL_Surface *z = IMG_LoadPNG_RW(&bmageFp);

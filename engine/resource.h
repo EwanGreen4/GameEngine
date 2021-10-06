@@ -5,8 +5,6 @@
 #include <string>
 #include <vector>
 
-#define INCBIN_PREFIX r_
-#include "lib/incbin/incbin.h"
 #include "lib/microtar/microtar.h"
 
 class Resource {
@@ -15,11 +13,15 @@ public:
   Resource();
   ~Resource();
 
-  const char *tarData;
+  void *tarData;
   const char *
   getFile(const std::string name); // corresponds to file name (with prefixes)
   unsigned int getSize(const std::string name);
   unsigned long countFiles();
+
+  //add public type wrapper method for getFileList()
+  //add lots more error checking
+  // add method to check file existence
 
 private:
   struct fileContents {

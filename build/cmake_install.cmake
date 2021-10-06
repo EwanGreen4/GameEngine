@@ -1,4 +1,4 @@
-# Install script for directory: /run/media/ewan/EwanSSD/development/c-c++/GameEngine
+# Install script for directory: /home/ewan/GameEngine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/run/media/ewan/EwanSSD/development/c-c++/GameEngine/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ewan/GameEngine/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

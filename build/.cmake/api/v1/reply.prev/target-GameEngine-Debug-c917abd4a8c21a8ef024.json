@@ -32,13 +32,13 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 28,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 27,
+				"line" : 30,
 				"parent" : 0
 			}
 		]
@@ -60,6 +60,10 @@
 				{
 					"backtrace" : 3,
 					"path" : "/usr/include/SDL2"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/ewan/GameEngine/engine"
 				}
 			],
 			"language" : "CXX",
@@ -75,8 +79,32 @@
 			[
 				0,
 				4,
-				6,
-				8
+				7,
+				9
+			]
+		},
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/usr/include/SDL2"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/ewan/GameEngine/engine"
+				}
+			],
+			"language" : "C",
+			"sourceIndexes" : 
+			[
+				5
 			]
 		}
 	],
@@ -126,15 +154,17 @@
 			[
 				0,
 				4,
-				6,
-				8
+				5,
+				7,
+				9
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				10
 			]
 		},
 		{
@@ -143,8 +173,8 @@
 			[
 				2,
 				3,
-				5,
-				7
+				6,
+				8
 			]
 		}
 	],
@@ -179,6 +209,12 @@
 		},
 		{
 			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "engine/lib/microtar/microtar.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
 			"path" : "engine/resource.h",
 			"sourceGroupIndex" : 2
 		},
@@ -198,6 +234,11 @@
 			"compileGroupIndex" : 0,
 			"path" : "implementation.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "data.grc",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"
