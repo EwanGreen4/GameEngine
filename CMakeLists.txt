@@ -14,9 +14,12 @@ add_executable(${PROJECT_NAME}
     engine/gameengine.h
     engine/application.h
     engine/application.cpp
-
+engine/configinterface/configinterface.h engine/configinterface/configinterface.cpp
     engine/lib/microtar/microtar.c
-
+    engine/configinterface/configtypes.h engine/configinterface/configtypes.cpp
+engine/gui/gui.h engine/gui/gui.cpp
+    engine/linearmath.h
+    engine/linearmath.cpp
     engine/resource.h
     engine/resource.cpp
 

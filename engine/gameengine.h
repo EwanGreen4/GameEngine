@@ -5,7 +5,6 @@
 #include "resource.h"
 
 /* TODO: Major things below
- * - add signals and slots
  * - event scheduler
  * - default mainloop with scheduled events
  * - default renderer, audio and i/o configurations (SDL, miniaudio)

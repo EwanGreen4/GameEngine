@@ -1,3 +1,4 @@
+#include "engine/resource.h"
 #include "implementation.h"
 
 int main(int argc, char *argv[]) {
