@@ -1,1 +1,3 @@
 # gameengine
+Very crude & unusable game engine foundation. I have done basically nothing noteworthy here with the exception of the baked-in resource system;
+the build system takes a tarball and embeds it inside the executable (pre-C23 #embed) and exposes an API to access the files within the tarball at runtime. Unfortunately, it's not particularly good because even though there is no compression involved, the way I did it makes it so the whole tarball is loaded in memory & is very impractical for large resources. A silly implementation, but a neat idea & something I would love to flesh out with performant random access & some (optional!) compression
